@@ -1,0 +1,132 @@
+[
+    {
+        "_object_id": "_DASHBOARD",
+        "instanceId": "5a9f9519dc46b",
+        "name": "主机指标采集",
+        "namespace": "resource-monitor.HOST",
+        "panels": [
+            {
+                "brickConf": "{\"brick\":\"chart-v2.gauge-chart\",\"properties\":{\"height\":150,\"data\":[{\"item\":\"CPU使用率\"}],\"yField\":\"percent\",\"gaugeTitle\":\"CPU使用率\",\"thresholdColors\":[{\"value\":50,\"color\":\"#0086FA\"},{\"value\":90,\"color\":\"#FFBF00\"},{\"value\":100,\"color\":\"#F5222D\"}],\"axis\":{\"yAxis\":{\"min\":0,\"max\":100,\"unit\":\"%\",\"precision\":0}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-select\",\"args\":[{\"model\":\"easyops.HOST\",\"statements\":[{\"name\":\"host_cpu_used_total\",\"alias\":\"host_cpu_used_total\"},{\"name\":\"time\"}],\"filters\":[{\"name\":\"time\",\"operator\":\">=\",\"value\":\"now-5m\"},{\"name\":\"host_cpu_used_total\",\"operator\":\"!=\",\"value\":null},{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId|string}\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}],\"limit\":{\"limit\":1}}],\"transform\":{\"data[0].percent\":\"<% _.get(DATA.list, \\\"[0][\\\\\\\"host_cpu_used_total\\\\\\\"]\\\") %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 6,
+                "id": "chart-v2.gauge-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "CPU使用率",
+                "width": 8,
+                "x": 0,
+                "y": 0
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.gauge-chart\",\"properties\":{\"height\":150,\"data\":[{\"item\":\"内存使用率\"}],\"yField\":\"percent\",\"gaugeTitle\":\"内存使用率\",\"thresholdColors\":[{\"value\":50,\"color\":\"#0086FA\"},{\"value\":90,\"color\":\"#FFBF00\"},{\"value\":100,\"color\":\"#F5222D\"}],\"axis\":{\"yAxis\":{\"min\":0,\"max\":100,\"unit\":\"%\",\"precision\":2}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-select\",\"args\":[{\"model\":\"easyops.HOST\",\"statements\":[{\"name\":\"host_mem_percent\",\"alias\":\"host_mem_percent\"},{\"name\":\"time\"}],\"filters\":[{\"name\":\"time\",\"operator\":\">=\",\"value\":\"now-5m\"},{\"name\":\"host_mem_percent\",\"operator\":\"!=\",\"value\":null},{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId|string}\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}],\"limit\":{\"limit\":1}}],\"transform\":{\"data[0].percent\":\"<% _.get(DATA.list, \\\"[0][\\\\\\\"host_mem_percent\\\\\\\"]\\\") %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 6,
+                "id": "chart-v2.gauge-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "内存使用率",
+                "width": 8,
+                "x": 8,
+                "y": 0
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.gauge-chart\",\"properties\":{\"height\":150,\"data\":[{\"item\":\"最大磁盘使用率\"}],\"yField\":\"percent\",\"gaugeTitle\":\"最大磁盘使用率\",\"thresholdColors\":[{\"value\":50,\"color\":\"#0086FA\"},{\"value\":90,\"color\":\"#FFBF00\"},{\"value\":100,\"color\":\"#F5222D\"}],\"axis\":{\"yAxis\":{\"min\":0,\"max\":100,\"unit\":\"%\",\"precision\":2}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-select\",\"args\":[{\"model\":\"easyops.HOST\",\"statements\":[{\"name\":\"host_disk_max_used_percent\",\"alias\":\"host_disk_max_used_percent\"},{\"name\":\"time\"}],\"filters\":[{\"name\":\"time\",\"operator\":\">=\",\"value\":\"now-5m\"},{\"name\":\"host_disk_max_used_percent\",\"operator\":\"!=\",\"value\":null},{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId|string}\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}],\"limit\":{\"limit\":1}}],\"transform\":{\"data[0].percent\":\"<% _.get(DATA.list, \\\"[0][\\\\\\\"host_disk_max_used_percent\\\\\\\"]\\\") %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 6,
+                "id": "chart-v2.gauge-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "磁盘最大使用率",
+                "width": 8,
+                "x": 16,
+                "y": 0
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_load_1\",\"host_load_5\",\"host_load_15\"]},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_load_1\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_load_1\"]}},{\"name\":\"host_load_5\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_load_5\"]}},{\"name\":\"host_load_15\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_load_15\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "系统负载",
+                "width": 12,
+                "x": 12,
+                "y": 6
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_cpu_used_total\",\"host_cpu_used_sy\",\"host_cpu_used_us\"],\"axis\":{\"yAxis\":{\"min\":0,\"max\":100,\"unit\":\"percent(100)\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_cpu_used_total\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_cpu_used_total\"]}},{\"name\":\"host_cpu_used_sy\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_cpu_used_sy\"]}},{\"name\":\"host_cpu_used_us\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_cpu_used_us\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "CPU使用率",
+                "width": 12,
+                "x": 0,
+                "y": 6
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_disk_used\",\"host_disk_free\"],\"axis\":{\"yAxis\":{\"unit\":\"KiB\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_disk_used\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_disk_used\"]}},{\"name\":\"host_disk_free\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_disk_free\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "磁盘使用",
+                "width": 12,
+                "x": 0,
+                "y": 14
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_mem_used\",\"host_mem_available\",\"host_mem_free\"],\"axis\":{\"yAxis\":{\"unit\":\"KB\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_mem_used\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_mem_used\"]}},{\"name\":\"host_mem_available\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_mem_available\"]}},{\"name\":\"host_mem_free\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_mem_free\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "内存使用",
+                "width": 12,
+                "x": 12,
+                "y": 14
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_io_w_s\",\"host_io_r_s\"],\"axis\":{\"yAxis\":{\"min\":0,\"unit\":\"Kbps\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_io_w_s\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_io_w_s\"]}},{\"name\":\"host_io_r_s\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_io_r_s\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "IO读写",
+                "width": 12,
+                "x": 0,
+                "y": 22
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_io_util\"],\"axis\":{\"yAxis\":{\"min\":0,\"max\":100,\"unit\":\"percent(100)\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_io_util\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_io_util\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "IO使用率",
+                "width": 12,
+                "x": 12,
+                "y": 22
+            },
+            {
+                "brickConf": "{\"brick\":\"chart-v2.time-series-chart\",\"properties\":{\"height\":230,\"xField\":\"time\",\"yFields\":[\"host_net_bits_in\",\"host_net_bits_out\"],\"axis\":{\"yAxis\":{\"unit\":\"KBps\"}}},\"lifeCycle\":{\"useResolves\":[{\"provider\":\"providers-of-data-exchange.olap-api-query\",\"args\":[{\"model\":\"easyops.HOST\",\"dims\":[\"time(1m)\"],\"measures\":[{\"name\":\"host_net_bits_in\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_net_bits_in\"]}},{\"name\":\"host_net_bits_out\",\"function\":{\"expression\":\"avg\",\"args\":[\"host_net_bits_out\"]}}],\"filters\":[{\"name\":\"instanceId\",\"operator\":\"==\",\"value\":\"${query.instanceId}\"},{\"name\":\"time\",\"operator\":\">=\",\"value\":\"${query.from=\\\"now-1h\\\"|string}\"},{\"name\":\"time\",\"operator\":\"<=\",\"value\":\"<% parseInt(+moment() / 1000) %>\"}],\"order\":[{\"name\":\"time\",\"order\":\"desc\"}]}],\"transform\":{\"data\":\"<% DATA.list %>\"},\"onReject\":{\"transform\":{\"error\":\"<% DATA.message || '接口请求错误' %>\"}}}]}}",
+                "height": 8,
+                "id": "chart-v2.time-series-chart",
+                "links": "[]",
+                "source": "brick",
+                "title": "网络流量",
+                "width": 24,
+                "x": 0,
+                "y": 30
+            }
+        ],
+        "variables": [
+            {
+                "id": "instanceId",
+                "multiSelect": false,
+                "name": "实例 ID",
+                "selectorDefaultValue": "59f8958fa9ecb",
+                "selectorObjectId": "HOST",
+                "selectorQuery": "{}",
+                "showSelector": false,
+                "type": "cmdb"
+            }
+        ]
+    }
+]

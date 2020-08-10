@@ -1,0 +1,18 @@
+agentType: easyops
+type: simple-script
+
+name: host_collector_plugin
+version: 1.0.0
+
+command:
+  collect:
+    type: python
+    user: root
+    interpreter: /usr/local/easyops/python/bin/python
+    scriptPath:
+      - src
+      - collect_host_metric.py
+
+category: OS系统
+params:
+  - timeout

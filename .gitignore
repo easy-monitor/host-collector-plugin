@@ -1,0 +1,11 @@
+# JetBrains
+.idea
+
+# Visual Studio Code
+.vscode
+
+# Python
+*.pyc
+
+# Project
+log

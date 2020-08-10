@@ -1,0 +1,876 @@
+[
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_available",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_available",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u53ef\u7528\u5185\u5b58\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_swap_percent",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_swap_percent",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u4ea4\u6362\u533a\u767e\u5206\u6bd4"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_modified",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_modified",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5df2\u4fee\u6539\u5185\u5b58"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_buffers",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_buffers",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5185\u5b58\u7f13\u51b2\u533a\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_swap_total",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_swap_total",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_used",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_used",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_free",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_free",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u7a7a\u95f2\u5185\u5b58\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_cached",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_cached",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5df2\u7f13\u5b58\u5185\u5b58"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_standby",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_standby",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5f85\u673a\u5185\u5b58"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_swap_used",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_swap_used",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_total",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_total",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u603b\u5185\u5b58\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_percent",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_percent",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u5185\u5b58\u4f7f\u7528\u767e\u5206\u6bd4"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_mem_swap_free",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_mem_swap_free",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u7a7a\u95f2\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_packages_in",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_in",
+        "metric_type": "gauge",
+        "unit": "pps",
+        "help": "\u6570\u636e\u5305\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_packages_in_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_in_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u6570\u636e\u5305\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_drop_out_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_drop_out_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u4e22\u5f03\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_error_in",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_error_in",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u7f51\u7edc\u63a5\u6536\u9519\u8bef\u5305\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_error_out_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_error_out_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u7f51\u7edc\u53d1\u9001\u9519\u8bef\u5305\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_bits_in",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_in",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_drop_in",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_drop_in",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u4e22\u5f03\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_error_out",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_error_out",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u7f51\u7edc\u53d1\u9001\u9519\u8bef\u5305\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_drop_in_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_drop_in_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u4e22\u5f03\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_bits_out",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_out",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_packages_out_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_out_per",
+        "metric_type": "gauge",
+        "unit": "pps",
+        "help": "\u7f51\u5361\u6570\u636e\u5305\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_bits_out_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_out_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_packages_out",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_out",
+        "metric_type": "gauge",
+        "unit": "pps",
+        "help": "\u6570\u636e\u5305\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_conn_total",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_conn_total",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u7f51\u7edc\u8fde\u63a5\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_error_in_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_error_in_per",
+        "metric_type": "gauge",
+        "unit": "pps",
+        "help": "\u7f51\u5361\u5165\u6d41\u91cf\u9519\u8bef"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "name": "host_collector_plugin_host_net_bits_in_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_in_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_net_drop_out",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_drop_out",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u4e22\u5f03\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_used",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_used",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u5df2\u4f7f\u7528\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_max_used_percent_mount",
+        "data_type": "string",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_max_used_percent_mount",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u78c1\u76d8\u6302\u8f7d\u6700\u5927\u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_disk_total_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_total_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u5206\u533a\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_max_used_percent",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_max_used_percent",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u78c1\u76d8\u6700\u5927\u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_free",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_free",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u7a7a\u95f2\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_total",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_total",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_free_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_free_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u5206\u533a\u7a7a\u95f2\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_disk_used_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_used_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "\u78c1\u76d8\u5206\u533a\u5df2\u4f7f\u7528\u5bb9\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_disk_used_percent",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_used_percent",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u78c1\u76d8\u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_disk_used_percent_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_used_percent_per",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u78c1\u76d8\u5206\u533a\u6700\u5927\u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_load_15",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_15",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "15\u5206\u949f\u5185\u5e73\u5747\u8d1f\u8f7d"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_cpu_used_us",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_cpu_used_us",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u7528\u6237\u7ea7 CPU \u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_cpu_used_total",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_cpu_used_total",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "CPU \u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_cpu_used_sy",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_cpu_used_sy",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u7cfb\u7edf\u7ea7 CPU \u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_cpu_used_wa",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_cpu_used_wa",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "I/O Wait \u7684 CPU \u4f7f\u7528\u7387"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_load_1",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_1",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "1\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_load_5",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_5",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "5\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_r_s",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_r_s",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u6bcf\u79d2\u5b8c\u6210\u7684\u8bfb I/O \u8bbe\u5907\u6b21\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_wkbyte_s_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_wkbyte_s_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5199K\u5b57\u8282\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_util_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_util_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u78c1\u76d8\u4e00\u79d2\u4e2d\u6709\u767e\u5206\u4e4b\u591a\u5c11\u7684\u65f6\u95f4\u7528\u4e8e I/O \u64cd\u4f5c"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_r_s_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_r_s_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5b8c\u6210\u7684\u8bfb I/O \u8bbe\u5907\u6b21\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_w_s_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_w_s_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5b8c\u6210\u7684\u5199 I/O \u8bbe\u5907\u6b21\u6570"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_rkbyte_s",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_rkbyte_s",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u6bcf\u79d2\u8bfbK\u5b57\u8282\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_rkbyte_s_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_rkbyte_s_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u8bfbK\u5b57\u8282\u6570"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_await",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_await",
+        "metric_type": "gauge",
+        "unit": "ms",
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u7b49\u5f85\u65f6\u95f4 (\u6beb\u79d2)"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_svctm_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_svctm_per",
+        "metric_type": "gauge",
+        "unit": "ms",
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u670d\u52a1\u65f6\u95f4 (\u6beb\u79d2)"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_avgrq_sz",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_avgrq_sz",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u6570\u636e\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_w_s",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_w_s",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u6bcf\u79d2\u5b8c\u6210\u7684\u5199 I/O \u8bbe\u5907\u6b21\u6570"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_avgrq_sz_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_avgrq_sz_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u6570\u636e\u5927\u5c0f"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_util",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_util",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "\u4e00\u79d2\u4e2d\u6709\u767e\u5206\u4e4b\u591a\u5c11\u7684\u65f6\u95f4\u7528\u4e8e I/O \u64cd\u4f5c"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_svctm",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_svctm",
+        "metric_type": "gauge",
+        "unit": "ms",
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u670d\u52a1\u65f6\u95f4 (\u6beb\u79d2)"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "disk_name",
+                "description": "\u78c1\u76d8\u540d\u79f0"
+            }
+        ],
+        "name": "host_collector_plugin_host_io_await_per",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_await_per",
+        "metric_type": "gauge",
+        "unit": "ms",
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u7b49\u5f85\u65f6\u95f4 (\u6beb\u79d2)"
+    },
+    {
+        "tagDefine": [],
+        "name": "host_collector_plugin_host_io_wkbyte_s",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_io_wkbyte_s",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u6bcf\u79d2\u5199K\u5b57\u8282\u6570"
+    }
+]
