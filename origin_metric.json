@@ -1,7 +1,6 @@
 [
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_available",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -12,7 +11,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_swap_percent",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -23,7 +21,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_modified",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -34,7 +31,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_buffers",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -45,7 +41,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_swap_total",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -56,7 +51,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_used",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -67,7 +61,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_free",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -78,7 +71,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_cached",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -89,7 +81,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_standby",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -100,7 +91,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_swap_used",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -111,7 +101,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_total",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -122,7 +111,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_percent",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -133,7 +121,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_mem_swap_free",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -144,7 +131,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_packages_in",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -168,7 +154,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_packages_in_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -192,7 +177,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_drop_out_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -203,7 +187,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_error_in",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -227,7 +210,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_error_out_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -238,7 +220,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_bits_in",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -249,7 +230,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_drop_in",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -260,7 +240,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_error_out",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -284,7 +263,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_drop_in_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -295,7 +273,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_bits_out",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -319,7 +296,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_packages_out_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -343,7 +319,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_bits_out_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -354,7 +329,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_packages_out",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -365,7 +339,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_conn_total",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -389,7 +362,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_error_in_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -413,7 +385,6 @@
                 "description": "\u7f51\u5361 IP"
             }
         ],
-        "name": "host_collector_plugin_host_net_bits_in_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -424,7 +395,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_net_drop_out",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -435,7 +405,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_used",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -446,7 +415,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_max_used_percent_mount",
         "data_type": "string",
         "paramDefine": [],
         "agentType": "easyops",
@@ -464,7 +432,6 @@
                 "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_disk_total_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -475,7 +442,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_max_used_percent",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -486,7 +452,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_free",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -497,7 +462,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_total",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -508,7 +472,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_free_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -526,7 +489,6 @@
                 "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_disk_used_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -537,7 +499,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_disk_used_percent",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -555,7 +516,6 @@
                 "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_disk_used_percent_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -566,7 +526,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_load_15",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -577,7 +536,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_cpu_used_us",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -588,7 +546,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_cpu_used_total",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -599,7 +556,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_cpu_used_sy",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -610,7 +566,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_cpu_used_wa",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -621,7 +576,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_load_1",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -632,7 +586,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_load_5",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -643,7 +596,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_r_s",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -661,7 +613,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_wkbyte_s_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -679,7 +630,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_util_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -697,7 +647,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_r_s_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -715,7 +664,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_w_s_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -726,7 +674,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_rkbyte_s",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -744,7 +691,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_rkbyte_s_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -755,7 +701,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_await",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -773,7 +718,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_svctm_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -784,7 +728,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_avgrq_sz",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -795,7 +738,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_w_s",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -813,7 +755,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_avgrq_sz_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -824,7 +765,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_util",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -835,7 +775,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_svctm",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -853,7 +792,6 @@
                 "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
-        "name": "host_collector_plugin_host_io_await_per",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -864,7 +802,6 @@
     },
     {
         "tagDefine": [],
-        "name": "host_collector_plugin_host_io_wkbyte_s",
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",

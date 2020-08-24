@@ -45,7 +45,7 @@ if __name__ == '__main__':
             logging.info("Get \"%s\" metric definition", metric_definition_type)
             metrics = json.loads(entry())
             for metric in metrics:
-                metric["name"] = "{}_{}".format(plugin_name, metric['name'])
+                del metric["name"]
             metric_definition_list.extend(metrics)
             logging.info("Get \"%s\" metric definition successfully", metric_definition_type)
     except Exception as e:
