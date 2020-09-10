@@ -2,7 +2,7 @@
     {
         "_object_id": "_DASHBOARD",
         "instanceId": "5a9f9519dc46b",
-        "name": "主机指标采集",
+        "name": "主机指标概览",
         "namespace": "resource-monitor.HOST",
         "panels": [
             {
