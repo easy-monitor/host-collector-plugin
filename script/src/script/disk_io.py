@@ -199,13 +199,13 @@ def _parse_linux2(output):
     return io_stats
 
 
-def get_io_info():
+def get_io_info_with_iostat():
     # mac下是不支持的
     cmd = 'iostat -x 1 2 -d -k'
     rcode, output = cmd_util.run_cmd(cmd, shell=True)
     if rcode:
         logging.error('can not found the iostat command')
-        return
+        return get_io_info_with_psutil()
 
     all_disk_io = _parse_linux2(output)
 
@@ -270,12 +270,12 @@ def convert_obj_to_map(ts, data):
     return data_map
 
 
-def set_last_status_windows(data):
+def set_last_status_psutil(data):
     with open("last_io_stat_psutil.json", "w") as f:
         f.write(json.dumps(data))
 
 
-def get_last_status_windows():
+def get_last_status_psutil():
     try:
         with open("last_io_stat_psutil.json", "r") as f:
             return json.load(f)
@@ -291,7 +291,7 @@ def _sum_cpu_time(cpu_time):
         return cpu_time.user + cpu_time.system + cpu_time.idle + cpu_time.iowait
 
 
-def get_io_info_windows():
+def get_io_info_with_psutil():
     curr_stat = psutil.disk_io_counters(True)
     if not curr_stat:
         logging.error("get io info %s from psutil, skip", curr_stat)
@@ -300,7 +300,7 @@ def get_io_info_windows():
     cpu_count = psutil.cpu_count(logical=True)
     curr_cpu_time = _sum_cpu_time(psutil.cpu_times()) / cpu_count
 
-    last_stat = get_last_status_windows()
+    last_stat = get_last_status_psutil()
 
     # 刚启动，第1次采集
     if not last_stat:
@@ -308,9 +308,9 @@ def get_io_info_windows():
             logging.error("get error cpu_time, return")
             return
 
-        set_last_status_windows(convert_obj_to_map(curr_cpu_time, curr_stat))
+        set_last_status_psutil(convert_obj_to_map(curr_cpu_time, curr_stat))
         time.sleep(5)
-        return get_io_info_windows()
+        return get_io_info_with_psutil()
 
     curr_stat = convert_obj_to_map(curr_cpu_time, curr_stat)
     io_data = {
@@ -377,7 +377,7 @@ def get_io_info_windows():
 
         per_disk_data[disk] = ({"disk_name": disk}, item)
 
-    set_last_status_windows(curr_stat)
+    set_last_status_psutil(curr_stat)
     result = [({}, io_data)]
     result.extend(per_disk_data.values())
     return _submit_metrics(Metrics, result, {})
@@ -409,9 +409,9 @@ def run():
     system_type = platform.system().lower()
     if system_type == "windows":
         import psutil
-        return get_io_info_windows()
+        return get_io_info_with_psutil()
     elif system_type == "linux" or system_type == "darwin":
-        return get_io_info()
+        return get_io_info_with_iostat()
     elif system_type == "aix":
         logging.error("not support yet")
     else:
