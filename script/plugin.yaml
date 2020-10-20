@@ -7,7 +7,6 @@ version: 1.0.0
 command:
   collect:
     type: python
-    user: root
     interpreter: /usr/local/easyops/python/bin/python
     scriptPath:
       - src
