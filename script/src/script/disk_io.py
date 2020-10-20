@@ -15,6 +15,7 @@ from collections import defaultdict
 
 from util import cmd_util
 
+easyops_path = os.environ.get("EASYOPS_BASE_PATH")
 instanceId=os.environ.get("EASYOPS_COLLECTOR_instanceId")
 
 RATE = "rate"
@@ -203,6 +204,11 @@ def get_io_info():
     # mac下是不支持的
     cmd = 'iostat -x 1 2 -d -k'
     rcode, output = cmd_util.run_cmd(cmd, shell=True)
+    if rcode:
+        logging.error('can not found the iostat command, try inner iostat')
+        cmd = '{}/python/tools/iostat -x 1 2 -d -k'.format(easyops_path)
+        rcode, output = cmd_util.run_cmd(cmd, shell=True)
+
     if rcode:
         logging.error('can not found the iostat command')
         return
