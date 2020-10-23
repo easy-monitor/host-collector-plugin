@@ -96,7 +96,31 @@ Metrics = {
         "data_type": DATA_TYPE_LONG,
         "unit": UNIT_KILOBYTES,
         "help": u"磁盘容量"
-    }
+    },
+    'host_disk_inode_total': {
+        "metric_type": GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": UNIT_KILOBYTES,
+        "help": u"磁盘inode总数"
+    },
+    'host_disk_inode_free': {
+        "metric_type": GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": UNIT_KILOBYTES,
+        "help": u"host.disk.inode_free"
+    },
+    'host_disk_inode_used': {
+        "metric_type": GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": UNIT_KILOBYTES,
+        "help": u"磁盘已使用inode数"
+    },
+    'host_disk_inode_per': {
+        "metric_type": GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": UNIT_KILOBYTES,
+        "help": u"磁盘inode使用率"
+    },
 }
 
 agent_type = "easyops"
@@ -186,6 +210,7 @@ def get_disk_linux():
 
     retdict['host_data'] = ({}, host_data)
     return _submit_metrics(Metrics, retdict.values(), {})
+
 
 def get_disk_windows():
     import wmi
