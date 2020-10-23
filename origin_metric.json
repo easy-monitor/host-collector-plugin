@@ -424,7 +424,14 @@
         "help": "磁盘空闲容量"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -491,7 +498,14 @@
         "help": "磁盘分区最大使用率"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -518,14 +532,21 @@
         "help": "磁盘分区容量"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
         "key": "host_disk_inode_free",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "host.disk.inode_free"
+        "help": "磁盘空闲inode数"
     },
     {
         "tagDefine": [
@@ -545,7 +566,14 @@
         "help": "磁盘分区已使用容量"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
