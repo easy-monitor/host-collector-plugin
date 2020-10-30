@@ -408,6 +408,43 @@
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
+        "key": "host_disk_used",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "磁盘已使用容量"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "string",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_max_used_percent_mount",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "磁盘挂载最大使用率"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_disk_total_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes",
+        "help": "磁盘分区容量"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
         "key": "host_disk_max_used_percent",
         "metric_type": "gauge",
         "unit": "%",
@@ -424,31 +461,14 @@
         "help": "磁盘空闲容量"
     },
     {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_disk_inode_per",
-        "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘inode使用率"
-    },
-    {
         "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_disk_used",
+        "key": "host_disk_total",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘已使用容量"
+        "help": "磁盘容量"
     },
     {
         "tagDefine": [],
@@ -461,14 +481,21 @@
         "help": "磁盘分区空闲容量"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_disk_total",
+        "key": "host_disk_used_per",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘容量"
+        "help": "磁盘分区已使用容量"
     },
     {
         "tagDefine": [],
@@ -498,99 +525,74 @@
         "help": "磁盘分区最大使用率"
     },
     {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
+        "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_disk_inode_total",
+        "key": "host_load_1_per_core",
         "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘inode总数"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_disk_total_per",
-        "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘分区容量"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_disk_inode_free",
-        "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘空闲inode数"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_disk_used_per",
-        "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘分区已使用容量"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "mountpoint",
-                "description": "磁盘分区名称"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_disk_inode_used",
-        "metric_type": "gauge",
-        "unit": "kilobytes",
-        "help": "磁盘已使用inode数"
+        "unit": "",
+        "help": "单核1分钟平均负载"
     },
     {
         "tagDefine": [],
-        "data_type": "string",
+        "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_disk_max_used_percent_mount",
+        "key": "host_cpu_used_sy",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "系统级 CPU 使用率"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_15_per_core",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘挂载最大使用率"
+        "help": "单核15分钟内平均负载"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_5",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "5分钟平均负载"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_cpu_used_wa",
+        "metric_type": "gauge",
+        "unit": "%",
+        "help": "I/O Wait 的 CPU 使用率"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_5_per_core",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "单核5分钟平均负载"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_load_1",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "1分钟平均负载"
     },
     {
         "tagDefine": [],
@@ -621,46 +623,6 @@
         "metric_type": "gauge",
         "unit": "%",
         "help": "CPU 使用率"
-    },
-    {
-        "tagDefine": [],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_cpu_used_sy",
-        "metric_type": "gauge",
-        "unit": "%",
-        "help": "系统级 CPU 使用率"
-    },
-    {
-        "tagDefine": [],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_cpu_used_wa",
-        "metric_type": "gauge",
-        "unit": "%",
-        "help": "I/O Wait 的 CPU 使用率"
-    },
-    {
-        "tagDefine": [],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_load_1",
-        "metric_type": "gauge",
-        "unit": "",
-        "help": "1分钟平均负载"
-    },
-    {
-        "tagDefine": [],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_load_5",
-        "metric_type": "gauge",
-        "unit": "",
-        "help": "5分钟平均负载"
     },
     {
         "tagDefine": [],

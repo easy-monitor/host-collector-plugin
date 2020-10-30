@@ -73,6 +73,24 @@ Metrics = {
         "unit": "",
         "help": u"15分钟内平均负载"
     },
+    'host_load_1_per_core': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"单核1分钟平均负载"
+    },
+    'host_load_5_per_core': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"单核5分钟平均负载"
+    },
+    'host_load_15_per_core': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"单核15分钟内平均负载"
+    },
 }
 
 agent_type = "easyops"
@@ -91,11 +109,17 @@ class HostCPUCollector(object):
     def get_cpu_info(self):
         cpu_info = {}
         average_load = os.getloadavg()
+        
+        cpu_physical_cores = psutil.cpu_count(logical=False)
         cpu_info.update({
             'host_load_1': average_load[0],
             'host_load_5': average_load[1],
-            'host_load_15': average_load[2]
+            'host_load_15': average_load[2],
+            'host_load_1_per_core': '%.2f' % (average_load[0] / cpu_physical_cores),
+            'host_load_5_per_core': '%.2f' % (average_load[1] / cpu_physical_cores),
+            'host_load_15_per_core': '%.2f' % (average_load[2] / cpu_physical_cores)
         })
+        
         cpu_info.update({"host_cpu_used_total": int(psutil.cpu_percent(interval=1))})
 
         cpu_times = psutil.cpu_times()
