@@ -110,7 +110,7 @@ class HostCPUCollector(object):
         cpu_info = {}
         average_load = os.getloadavg()
         
-        cpu_physical_cores = psutil.cpu_count(logical=False)
+        cpu_physical_cores = psutil.cpu_count(logical=True)
         cpu_info.update({
             'host_load_1': average_load[0],
             'host_load_5': average_load[1],
@@ -120,7 +120,7 @@ class HostCPUCollector(object):
             'host_load_15_per_core': '%.2f' % (average_load[2] / cpu_physical_cores)
         })
         
-        cpu_info.update({"host_cpu_used_total": int(psutil.cpu_percent(interval=1))})
+        cpu_info.update({"host_cpu_used_total": int(psutil.cpu_percent(interval=3))})
 
         cpu_times = psutil.cpu_times()
         if self.last_cpu_times is None:
