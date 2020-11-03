@@ -119,8 +119,11 @@ class HostCPUCollector(object):
             'host_load_5_per_core': '%.2f' % (average_load[1] / cpu_physical_cores),
             'host_load_15_per_core': '%.2f' % (average_load[2] / cpu_physical_cores)
         })
-        
-        cpu_info.update({"host_cpu_used_total": int(psutil.cpu_percent(interval=3))})
+        cpu_used_total = int(psutil.cpu_percent(interval=3))
+        # 可能因为浮点型数据相减，得到一个很大的负数
+        if cpu_used_total < 0:
+            cpu_used_total = 0
+        cpu_info.update({"host_cpu_used_total": cpu_used_total})
 
         cpu_times = psutil.cpu_times()
         if self.last_cpu_times is None:
