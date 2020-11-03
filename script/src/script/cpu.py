@@ -110,7 +110,7 @@ class HostCPUCollector(object):
         cpu_info = {}
         average_load = os.getloadavg()
         
-        cpu_physical_cores = psutil.cpu_count(logical=False)
+        cpu_physical_cores = psutil.cpu_count(logical=True)
         cpu_info.update({
             'host_load_1': average_load[0],
             'host_load_5': average_load[1],
