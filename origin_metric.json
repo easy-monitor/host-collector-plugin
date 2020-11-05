@@ -421,7 +421,7 @@
         "key": "host_disk_max_used_percent_mount",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘挂载最大使用率"
+        "help": "最大使用率磁盘分区"
     },
     {
         "tagDefine": [
