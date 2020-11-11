@@ -216,7 +216,7 @@ def _submit_metrics(metrics, results, tags):
     return json.dumps(output, indent=4)
 
 
-def run():
+def run(timeout):
     system_type = platform.system().lower()
     if system_type == "windows":
         return get_memory_info_windows()
@@ -244,7 +244,7 @@ def output_metric():
 if __name__ == "__main__":
     # output_metric()
     try:
-        run()
+        run(60)
     except Exception as e:
         logging.error(traceback.format_exc())
         logging.error("run collect disk error, err=%s", e.message)

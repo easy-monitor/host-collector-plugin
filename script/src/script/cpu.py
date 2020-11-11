@@ -200,7 +200,7 @@ class WindowsHostCPUCollector(HostCPUCollector):
         return host_data
 
 
-def run():
+def run(timeout):
     system_type = platform.system().lower()
     if system_type == "windows":
         windows_host_cpu_collector = WindowsHostCPUCollector()
@@ -254,7 +254,7 @@ def output_metric():
 if __name__ == "__main__":
     try:
         # print output_metric()
-        print run()
+        print run(60)
     except Exception as e:
         logging.error(traceback.format_exc())
         logging.error("run collect cpu error, err=%s", e.message)

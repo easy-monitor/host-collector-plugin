@@ -34,7 +34,7 @@ if __name__ == '__main__':
 
     results = {}
     for colect_type, entry in collect_entries.iteritems():
-        p = pool.apply_async(entry, ())
+        p = pool.apply_async(entry, (timeout,))
         results[colect_type] = p
         logging.info("start process for type %s", colect_type)
 
