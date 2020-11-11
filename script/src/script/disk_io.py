@@ -411,7 +411,7 @@ def _submit_metrics(metrics, results, tags):
     return json.dumps(output, indent=4)
 
 
-def run():
+def run(timeout):
     system_type = platform.system().lower()
     if system_type == "windows":
         import psutil
@@ -439,7 +439,7 @@ def output_metric():
 
 if __name__ == "__main__":
     try:
-        run()
+        run(60)
     except Exception as e:
         logging.error(traceback.format_exc())
         logging.error("run collect disk error, err=%s", e.message)

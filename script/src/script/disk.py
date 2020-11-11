@@ -132,7 +132,7 @@ agent_type = "easyops"
 param_define = []
 
 
-def get_disk_linux():
+def get_disk_linux(timeout):
     retdict = {}
     host_data = {
         'host_disk_max_used_percent': 0,
@@ -185,7 +185,7 @@ def get_disk_linux():
     host_data['host_disk_free'] >>= 10
     host_data['host_disk_total'] >>= 10
 
-    rcode, output = cmd_util.run_cmd('df -i', shell=True)
+    rcode, output = cmd_util.run_cmd('timeout {timeout} df -i'.format(timeout=timeout), shell=True)
     if not rcode:
         inode_data = {
             'host_disk_inode_total': 0,
@@ -287,12 +287,12 @@ def _submit_metrics(metrics, results, tags):
         output.append(host_data)
     return json.dumps(output, indent=4)
 
-def run():
+def run(timeout):
     system_type = platform.system().lower()
     if system_type == "windows":
         return get_disk_windows()
     elif system_type == "linux" or system_type == "darwin":
-        return get_disk_linux()
+        return get_disk_linux(timeout)
     elif system_type == "aix":
         logging.error("not support yet")
     else:
@@ -313,7 +313,7 @@ def output_metric():
 
 if __name__ == "__main__":
     try:
-        run()
+        run(60)
     except Exception as e:
         logging.error(traceback.format_exc())
         logging.error("run collect disk error, err=%s", e.message)
