@@ -7,7 +7,7 @@
         "key": "host_mem_available",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "可用内存大小"
+        "help": "\u53ef\u7528\u5185\u5b58\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -17,7 +17,7 @@
         "key": "host_mem_swap_percent",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "已使用内存交换区百分比"
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u4ea4\u6362\u533a\u767e\u5206\u6bd4"
     },
     {
         "tagDefine": [],
@@ -27,7 +27,7 @@
         "key": "host_mem_modified",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "已修改内存"
+        "help": "\u5df2\u4fee\u6539\u5185\u5b58"
     },
     {
         "tagDefine": [],
@@ -37,7 +37,7 @@
         "key": "host_mem_buffers",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "内存缓冲区大小"
+        "help": "\u5185\u5b58\u7f13\u51b2\u533a\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -47,7 +47,7 @@
         "key": "host_mem_swap_total",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "内存交换区大小"
+        "help": "\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -57,7 +57,7 @@
         "key": "host_mem_used",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "已使用内存大小"
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -67,7 +67,7 @@
         "key": "host_mem_free",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "空闲内存大小"
+        "help": "\u7a7a\u95f2\u5185\u5b58\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -77,7 +77,7 @@
         "key": "host_mem_cached",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "已缓存内存"
+        "help": "\u5df2\u7f13\u5b58\u5185\u5b58"
     },
     {
         "tagDefine": [],
@@ -87,7 +87,7 @@
         "key": "host_mem_standby",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "待机内存"
+        "help": "\u5f85\u673a\u5185\u5b58"
     },
     {
         "tagDefine": [],
@@ -97,7 +97,7 @@
         "key": "host_mem_swap_used",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "已使用内存交换区大小"
+        "help": "\u5df2\u4f7f\u7528\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -107,7 +107,7 @@
         "key": "host_mem_total",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "总内存大小"
+        "help": "\u603b\u5185\u5b58\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -117,7 +117,7 @@
         "key": "host_mem_percent",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "内存使用百分比"
+        "help": "\u5185\u5b58\u4f7f\u7528\u767e\u5206\u6bd4"
     },
     {
         "tagDefine": [],
@@ -127,7 +127,7 @@
         "key": "host_mem_swap_free",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "空闲内存交换区大小"
+        "help": "\u7a7a\u95f2\u5185\u5b58\u4ea4\u6362\u533a\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -137,30 +137,17 @@
         "key": "host_net_packages_in",
         "metric_type": "gauge",
         "unit": "pps",
-        "help": "数据包入流量"
+        "help": "\u6570\u636e\u5305\u5165\u6d41\u91cf"
     },
     {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface",
-                "description": "网卡名称"
-            },
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface_ip",
-                "description": "网卡 IP"
-            }
-        ],
+        "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_net_packages_in_per",
+        "key": "host_net_tcp_fin_wait_2",
         "metric_type": "gauge",
-        "unit": "kilobytes/s",
-        "help": "网卡数据包入流量"
+        "unit": "",
+        "help": "SYN_FIN-WAIT-2SENT \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [
@@ -168,13 +155,13 @@
                 "default": "",
                 "readOnly": true,
                 "name": "interface",
-                "description": "网卡名称"
+                "description": "\u7f51\u5361\u540d\u79f0"
             },
             {
                 "default": "",
                 "readOnly": true,
                 "name": "interface_ip",
-                "description": "网卡 IP"
+                "description": "\u7f51\u5361 IP"
             }
         ],
         "data_type": "long",
@@ -183,7 +170,17 @@
         "key": "host_net_drop_out_per",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "网卡丢弃出流量"
+        "help": "\u7f51\u5361\u4e22\u5f03\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_fin_wait_1",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "FIN-WAIT-1 \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [],
@@ -193,40 +190,17 @@
         "key": "host_net_error_in",
         "metric_type": "gauge",
         "unit": "",
-        "help": "网络接收错误包量"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface",
-                "description": "网卡名称"
-            },
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface_ip",
-                "description": "网卡 IP"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_net_error_out_per",
-        "metric_type": "gauge",
-        "unit": "",
-        "help": "网络发送错误包量"
+        "help": "\u7f51\u7edc\u63a5\u6536\u9519\u8bef\u5305\u91cf"
     },
     {
         "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_net_bits_in",
+        "key": "host_net_tcp_last_ack",
         "metric_type": "gauge",
-        "unit": "kilobytes/s",
-        "help": "入流量"
+        "unit": "",
+        "help": "LAST-ACK \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [],
@@ -236,7 +210,37 @@
         "key": "host_net_drop_in",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "丢弃入流量"
+        "help": "\u4e22\u5f03\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_closed",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "CLOSED \u8fde\u63a5\u6570\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_unix_total",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "unix socket\u603b\u6570"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_established",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "ESTABLISHED \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [],
@@ -246,7 +250,17 @@
         "key": "host_net_error_out",
         "metric_type": "gauge",
         "unit": "",
-        "help": "网络发送错误包量"
+        "help": "\u7f51\u7edc\u53d1\u9001\u9519\u8bef\u5305\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_udp_total",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "udp socket\u603b\u6570"
     },
     {
         "tagDefine": [
@@ -254,13 +268,13 @@
                 "default": "",
                 "readOnly": true,
                 "name": "interface",
-                "description": "网卡名称"
+                "description": "\u7f51\u5361\u540d\u79f0"
             },
             {
                 "default": "",
                 "readOnly": true,
                 "name": "interface_ip",
-                "description": "网卡 IP"
+                "description": "\u7f51\u5361 IP"
             }
         ],
         "data_type": "long",
@@ -269,17 +283,17 @@
         "key": "host_net_drop_in_per",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "网卡丢弃入流量"
+        "help": "\u7f51\u5361\u4e22\u5f03\u5165\u6d41\u91cf"
     },
     {
         "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_net_bits_out",
+        "key": "host_net_bits_in",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "出流量"
+        "help": "\u5165\u6d41\u91cf"
     },
     {
         "tagDefine": [
@@ -287,13 +301,13 @@
                 "default": "",
                 "readOnly": true,
                 "name": "interface",
-                "description": "网卡名称"
+                "description": "\u7f51\u5361\u540d\u79f0"
             },
             {
                 "default": "",
                 "readOnly": true,
                 "name": "interface_ip",
-                "description": "网卡 IP"
+                "description": "\u7f51\u5361 IP"
             }
         ],
         "data_type": "long",
@@ -302,40 +316,27 @@
         "key": "host_net_packages_out_per",
         "metric_type": "gauge",
         "unit": "pps",
-        "help": "网卡数据包出流量"
-    },
-    {
-        "tagDefine": [
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface",
-                "description": "网卡名称"
-            },
-            {
-                "default": "",
-                "readOnly": true,
-                "name": "interface_ip",
-                "description": "网卡 IP"
-            }
-        ],
-        "data_type": "long",
-        "paramDefine": [],
-        "agentType": "easyops",
-        "key": "host_net_bits_out_per",
-        "metric_type": "gauge",
-        "unit": "kilobytes/s",
-        "help": "网卡出流量"
+        "help": "\u7f51\u5361\u6570\u636e\u5305\u51fa\u6d41\u91cf"
     },
     {
         "tagDefine": [],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
-        "key": "host_net_packages_out",
+        "key": "host_net_tcp_listen",
         "metric_type": "gauge",
-        "unit": "pps",
-        "help": "数据包出流量"
+        "unit": "",
+        "help": "LISTENING \u8fde\u63a5\u6570\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_closing",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "CLOSING \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [],
@@ -345,7 +346,7 @@
         "key": "host_net_conn_total",
         "metric_type": "gauge",
         "unit": "",
-        "help": "网络连接数"
+        "help": "\u7f51\u7edc\u8fde\u63a5\u6570"
     },
     {
         "tagDefine": [
@@ -353,13 +354,13 @@
                 "default": "",
                 "readOnly": true,
                 "name": "interface",
-                "description": "网卡名称"
+                "description": "\u7f51\u5361\u540d\u79f0"
             },
             {
                 "default": "",
                 "readOnly": true,
                 "name": "interface_ip",
-                "description": "网卡 IP"
+                "description": "\u7f51\u5361 IP"
             }
         ],
         "data_type": "long",
@@ -368,7 +369,39 @@
         "key": "host_net_error_in_per",
         "metric_type": "gauge",
         "unit": "pps",
-        "help": "网卡入流量错误"
+        "help": "\u7f51\u5361\u5165\u6d41\u91cf\u9519\u8bef"
+    },
+    {
+        "tagDefine": [],
+        "help": "\u7f51\u7edc\u603b\u5305\u91cf",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "calculate",
+        "key": "host_net_packages_total",
+        "metric_type": "gauge",
+        "expression": "host_net_packages_in + host_net_packages_out",
+        "unit": "pps"
+    },
+    {
+        "tagDefine": [],
+        "help": "\u7f51\u7edc\u603b\u4e22\u5305\u91cf",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "calculate",
+        "key": "host_net_drop_total",
+        "metric_type": "gauge",
+        "expression": "host_net_drop_in + host_net_drop_out",
+        "unit": "pps"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_syn_sent",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "SYN_SENT \u8fde\u63a5\u6570\u91cf"
     },
     {
         "tagDefine": [
@@ -376,13 +409,164 @@
                 "default": "",
                 "readOnly": true,
                 "name": "interface",
-                "description": "网卡名称"
+                "description": "\u7f51\u5361\u540d\u79f0"
             },
             {
                 "default": "",
                 "readOnly": true,
                 "name": "interface_ip",
-                "description": "网卡 IP"
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_in_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u6570\u636e\u5305\u5165\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_out_per",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u7f51\u5361\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
+            }
+        ],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_error_out_per",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "\u7f51\u7edc\u53d1\u9001\u9519\u8bef\u5305\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_syn_recv",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "SYN_RECV \u8fde\u63a5\u6570\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_time_wait",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "TIME-WAIT \u8fde\u63a5\u6570\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_bits_out",
+        "metric_type": "gauge",
+        "unit": "kilobytes/s",
+        "help": "\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "help": "\u7f51\u7edc\u603b\u9519\u8bef\u5305\u91cf",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "calculate",
+        "key": "host_net_error_total",
+        "metric_type": "gauge",
+        "expression": "host_net_error_in + host_net_error_out",
+        "unit": "pps"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_close_wait",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "CLOSE-WAIT \u8fde\u63a5\u6570\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_packages_out",
+        "metric_type": "gauge",
+        "unit": "pps",
+        "help": "\u6570\u636e\u5305\u51fa\u6d41\u91cf"
+    },
+    {
+        "tagDefine": [],
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "easyops",
+        "key": "host_net_tcp_total",
+        "metric_type": "gauge",
+        "unit": "",
+        "help": "tcp socket\u603b\u6570"
+    },
+    {
+        "tagDefine": [],
+        "help": "\u603b\u6d41\u91cf",
+        "data_type": "long",
+        "paramDefine": [],
+        "agentType": "calculate",
+        "key": "host_net_bits_total",
+        "metric_type": "gauge",
+        "expression": "host_net_bits_in + host_net_bits_out",
+        "unit": "kbps"
+    },
+    {
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface",
+                "description": "\u7f51\u5361\u540d\u79f0"
+            },
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "interface_ip",
+                "description": "\u7f51\u5361 IP"
             }
         ],
         "data_type": "long",
@@ -391,7 +575,7 @@
         "key": "host_net_bits_in_per",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "网卡入流量"
+        "help": "\u7f51\u5361\u5165\u6d41\u91cf"
     },
     {
         "tagDefine": [],
@@ -401,7 +585,7 @@
         "key": "host_net_drop_out",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "丢弃出流量"
+        "help": "\u4e22\u5f03\u51fa\u6d41\u91cf"
     },
     {
         "tagDefine": [],
@@ -411,7 +595,7 @@
         "key": "host_disk_max_used_percent",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "磁盘最大使用率"
+        "help": "\u78c1\u76d8\u6700\u5927\u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -421,7 +605,7 @@
         "key": "host_disk_free",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘空闲容量"
+        "help": "\u78c1\u76d8\u7a7a\u95f2\u5bb9\u91cf"
     },
     {
         "tagDefine": [
@@ -429,7 +613,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -438,7 +622,7 @@
         "key": "host_disk_inode_per",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘inode使用率"
+        "help": "\u78c1\u76d8inode\u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -448,7 +632,7 @@
         "key": "host_disk_used",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘已使用容量"
+        "help": "\u78c1\u76d8\u5df2\u4f7f\u7528\u5bb9\u91cf"
     },
     {
         "tagDefine": [],
@@ -458,7 +642,7 @@
         "key": "host_disk_free_per",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘分区空闲容量"
+        "help": "\u78c1\u76d8\u5206\u533a\u7a7a\u95f2\u5bb9\u91cf"
     },
     {
         "tagDefine": [],
@@ -468,7 +652,7 @@
         "key": "host_disk_total",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘容量"
+        "help": "\u78c1\u76d8\u5bb9\u91cf"
     },
     {
         "tagDefine": [],
@@ -478,7 +662,7 @@
         "key": "host_disk_used_percent",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "磁盘使用率"
+        "help": "\u78c1\u76d8\u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [
@@ -486,7 +670,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -495,7 +679,7 @@
         "key": "host_disk_used_percent_per",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "磁盘分区最大使用率"
+        "help": "\u78c1\u76d8\u5206\u533a\u6700\u5927\u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [
@@ -503,7 +687,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -512,7 +696,7 @@
         "key": "host_disk_inode_total",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘inode总数"
+        "help": "\u78c1\u76d8inode\u603b\u6570"
     },
     {
         "tagDefine": [
@@ -520,7 +704,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -529,7 +713,7 @@
         "key": "host_disk_total_per",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘分区容量"
+        "help": "\u78c1\u76d8\u5206\u533a\u5bb9\u91cf"
     },
     {
         "tagDefine": [
@@ -537,7 +721,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -546,7 +730,7 @@
         "key": "host_disk_inode_free",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘空闲inode数"
+        "help": "\u78c1\u76d8\u7a7a\u95f2inode\u6570"
     },
     {
         "tagDefine": [
@@ -554,7 +738,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -563,7 +747,7 @@
         "key": "host_disk_used_per",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘分区已使用容量"
+        "help": "\u78c1\u76d8\u5206\u533a\u5df2\u4f7f\u7528\u5bb9\u91cf"
     },
     {
         "tagDefine": [
@@ -571,7 +755,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "mountpoint",
-                "description": "磁盘分区名称"
+                "description": "\u78c1\u76d8\u5206\u533a\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -580,7 +764,7 @@
         "key": "host_disk_inode_used",
         "metric_type": "gauge",
         "unit": "kilobytes",
-        "help": "磁盘已使用inode数"
+        "help": "\u78c1\u76d8\u5df2\u4f7f\u7528inode\u6570"
     },
     {
         "tagDefine": [],
@@ -590,7 +774,7 @@
         "key": "host_disk_max_used_percent_mount",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘挂载最大使用率"
+        "help": "\u78c1\u76d8\u6302\u8f7d\u6700\u5927\u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -600,7 +784,7 @@
         "key": "host_load_1_per_core",
         "metric_type": "gauge",
         "unit": "",
-        "help": "单核1分钟平均负载"
+        "help": "\u5355\u68381\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -610,7 +794,7 @@
         "key": "host_cpu_used_sy",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "系统级 CPU 使用率"
+        "help": "\u7cfb\u7edf\u7ea7 CPU \u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -620,7 +804,7 @@
         "key": "host_load_15_per_core",
         "metric_type": "gauge",
         "unit": "",
-        "help": "单核15分钟内平均负载"
+        "help": "\u5355\u683815\u5206\u949f\u5185\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -630,7 +814,7 @@
         "key": "host_load_5",
         "metric_type": "gauge",
         "unit": "",
-        "help": "5分钟平均负载"
+        "help": "5\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -640,7 +824,7 @@
         "key": "host_cpu_used_wa",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "I/O Wait 的 CPU 使用率"
+        "help": "I/O Wait \u7684 CPU \u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -650,7 +834,7 @@
         "key": "host_load_5_per_core",
         "metric_type": "gauge",
         "unit": "",
-        "help": "单核5分钟平均负载"
+        "help": "\u5355\u68385\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -660,7 +844,7 @@
         "key": "host_load_1",
         "metric_type": "gauge",
         "unit": "",
-        "help": "1分钟平均负载"
+        "help": "1\u5206\u949f\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -670,7 +854,7 @@
         "key": "host_load_15",
         "metric_type": "gauge",
         "unit": "",
-        "help": "15分钟内平均负载"
+        "help": "15\u5206\u949f\u5185\u5e73\u5747\u8d1f\u8f7d"
     },
     {
         "tagDefine": [],
@@ -680,7 +864,7 @@
         "key": "host_cpu_used_us",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "用户级 CPU 使用率"
+        "help": "\u7528\u6237\u7ea7 CPU \u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -690,7 +874,7 @@
         "key": "host_cpu_used_total",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "CPU 使用率"
+        "help": "CPU \u4f7f\u7528\u7387"
     },
     {
         "tagDefine": [],
@@ -700,7 +884,7 @@
         "key": "host_io_r_s",
         "metric_type": "gauge",
         "unit": "",
-        "help": "每秒完成的读 I/O 设备次数"
+        "help": "\u6bcf\u79d2\u5b8c\u6210\u7684\u8bfb I/O \u8bbe\u5907\u6b21\u6570"
     },
     {
         "tagDefine": [
@@ -708,7 +892,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -717,7 +901,7 @@
         "key": "host_io_wkbyte_s_per",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "磁盘每秒写K字节数"
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5199K\u5b57\u8282\u6570"
     },
     {
         "tagDefine": [
@@ -725,7 +909,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -734,7 +918,7 @@
         "key": "host_io_util_per",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘一秒中有百分之多少的时间用于 I/O 操作"
+        "help": "\u78c1\u76d8\u4e00\u79d2\u4e2d\u6709\u767e\u5206\u4e4b\u591a\u5c11\u7684\u65f6\u95f4\u7528\u4e8e I/O \u64cd\u4f5c"
     },
     {
         "tagDefine": [
@@ -742,7 +926,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -751,7 +935,7 @@
         "key": "host_io_r_s_per",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘每秒完成的读 I/O 设备次数"
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5b8c\u6210\u7684\u8bfb I/O \u8bbe\u5907\u6b21\u6570"
     },
     {
         "tagDefine": [
@@ -759,7 +943,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -768,7 +952,7 @@
         "key": "host_io_w_s_per",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘每秒完成的写 I/O 设备次数"
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u5b8c\u6210\u7684\u5199 I/O \u8bbe\u5907\u6b21\u6570"
     },
     {
         "tagDefine": [],
@@ -778,7 +962,7 @@
         "key": "host_io_rkbyte_s",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "每秒读K字节数"
+        "help": "\u6bcf\u79d2\u8bfbK\u5b57\u8282\u6570"
     },
     {
         "tagDefine": [
@@ -786,7 +970,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -795,7 +979,7 @@
         "key": "host_io_rkbyte_s_per",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "磁盘每秒读K字节数"
+        "help": "\u78c1\u76d8\u6bcf\u79d2\u8bfbK\u5b57\u8282\u6570"
     },
     {
         "tagDefine": [],
@@ -805,7 +989,7 @@
         "key": "host_io_await",
         "metric_type": "gauge",
         "unit": "ms",
-        "help": "平均每次设备I/O操作的等待时间 (毫秒)"
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u7b49\u5f85\u65f6\u95f4 (\u6beb\u79d2)"
     },
     {
         "tagDefine": [
@@ -813,7 +997,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -822,7 +1006,7 @@
         "key": "host_io_svctm_per",
         "metric_type": "gauge",
         "unit": "ms",
-        "help": "磁盘平均每次设备I/O操作的服务时间 (毫秒)"
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u670d\u52a1\u65f6\u95f4 (\u6beb\u79d2)"
     },
     {
         "tagDefine": [],
@@ -832,7 +1016,7 @@
         "key": "host_io_avgrq_sz",
         "metric_type": "gauge",
         "unit": "",
-        "help": "平均每次设备I/O操作的数据大小"
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u6570\u636e\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -842,7 +1026,7 @@
         "key": "host_io_w_s",
         "metric_type": "gauge",
         "unit": "",
-        "help": "每秒完成的写 I/O 设备次数"
+        "help": "\u6bcf\u79d2\u5b8c\u6210\u7684\u5199 I/O \u8bbe\u5907\u6b21\u6570"
     },
     {
         "tagDefine": [
@@ -850,7 +1034,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -859,7 +1043,7 @@
         "key": "host_io_avgrq_sz_per",
         "metric_type": "gauge",
         "unit": "",
-        "help": "磁盘平均每次设备I/O操作的数据大小"
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u6570\u636e\u5927\u5c0f"
     },
     {
         "tagDefine": [],
@@ -869,7 +1053,7 @@
         "key": "host_io_util",
         "metric_type": "gauge",
         "unit": "%",
-        "help": "一秒中有百分之多少的时间用于 I/O 操作"
+        "help": "\u4e00\u79d2\u4e2d\u6709\u767e\u5206\u4e4b\u591a\u5c11\u7684\u65f6\u95f4\u7528\u4e8e I/O \u64cd\u4f5c"
     },
     {
         "tagDefine": [],
@@ -879,7 +1063,7 @@
         "key": "host_io_svctm",
         "metric_type": "gauge",
         "unit": "ms",
-        "help": "平均每次设备I/O操作的服务时间 (毫秒)"
+        "help": "\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u670d\u52a1\u65f6\u95f4 (\u6beb\u79d2)"
     },
     {
         "tagDefine": [
@@ -887,7 +1071,7 @@
                 "default": "",
                 "readOnly": true,
                 "name": "disk_name",
-                "description": "磁盘名称"
+                "description": "\u78c1\u76d8\u540d\u79f0"
             }
         ],
         "data_type": "long",
@@ -896,7 +1080,7 @@
         "key": "host_io_await_per",
         "metric_type": "gauge",
         "unit": "ms",
-        "help": "磁盘平均每次设备I/O操作的等待时间 (毫秒)"
+        "help": "\u78c1\u76d8\u5e73\u5747\u6bcf\u6b21\u8bbe\u5907I/O\u64cd\u4f5c\u7684\u7b49\u5f85\u65f6\u95f4 (\u6beb\u79d2)"
     },
     {
         "tagDefine": [],
@@ -906,262 +1090,6 @@
         "key": "host_io_wkbyte_s",
         "metric_type": "gauge",
         "unit": "kilobytes/s",
-        "help": "每秒写K字节数"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "help":"网络总丢包量",
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"calculate",
-        "key":"host_net_drop_total",
-        "metric_type":"gauge",
-        "expression":"host_net_drop_in + host_net_drop_out",
-        "unit":"pps"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "help":"网络总错误包量",
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"calculate",
-        "key":"host_net_error_total",
-        "metric_type":"gauge",
-        "expression":"host_net_error_in + host_net_error_out",
-        "unit":"pps"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "help":"网络总包量",
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"calculate",
-        "key":"host_net_packages_total",
-        "metric_type":"gauge",
-        "expression":"host_net_packages_in + host_net_packages_out",
-        "unit":"pps"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_closed",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"CLOSED 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_close_wait",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"CLOSE-WAIT 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_closing",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"CLOSING 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_established",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"ESTABLISHED 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_fin_wait_1",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"FIN-WAIT-1 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_fin_wait_2",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"SYN_FIN-WAIT-2SENT 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_last_ack",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"LAST-ACK 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_listen",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"LISTENING 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_syn_recv",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"SYN_RECV 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_syn_sent",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"SYN_SENT 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_time_wait",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"TIME-WAIT 连接数量"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_tcp_total",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"tcp socket总数"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_udp_total",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"udp socket总数"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"easyops",
-        "key":"host_net_unix_total",
-        "metric_type":"gauge",
-        "unit":"",
-        "help":"unix socket总数"
-    },
-    {
-        "tagDefine":[
-
-        ],
-        "help":"总流量",
-        "data_type":"long",
-        "paramDefine":[
-
-        ],
-        "agentType":"calculate",
-        "key":"host_net_bits_total",
-        "metric_type":"gauge",
-        "expression":"host_net_bits_in + host_net_bits_out",
-        "unit":"kbps"
+        "help": "\u6bcf\u79d2\u5199K\u5b57\u8282\u6570"
     }
 ]
