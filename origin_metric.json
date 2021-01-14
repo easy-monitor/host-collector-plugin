@@ -907,5 +907,261 @@
         "metric_type": "gauge",
         "unit": "kilobytes/s",
         "help": "每秒写K字节数"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "help":"网络总丢包量",
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"calculated",
+        "key":"host_net_drop_total",
+        "metric_type":"gauge",
+        "expression":"host_net_drop_in + host_net_drop_out",
+        "unit":"pps"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "help":"网络总错误包量",
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"calculated",
+        "key":"host_net_error_total",
+        "metric_type":"gauge",
+        "expression":"host_net_error_in + host_net_error_out",
+        "unit":"pps"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "help":"网络总包量",
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"calculated",
+        "key":"host_net_packages_total",
+        "metric_type":"gauge",
+        "expression":"host_net_packages_in + host_net_packages_out",
+        "unit":"pps"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_closed",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"CLOSED 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_close_wait",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"CLOSE-WAIT 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_closing",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"CLOSING 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_established",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"ESTABLISHED 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_fin_wait_1",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"FIN-WAIT-1 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_fin_wait_2",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"SYN_FIN-WAIT-2SENT 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_last_ack",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"LAST-ACK 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_listen",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"LISTENING 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_syn_recv",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"SYN_RECV 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_syn_sent",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"SYN_SENT 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_time_wait",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"TIME-WAIT 连接数量"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_tcp_total",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"tcp socket总数"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_udp_total",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"udp socket总数"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"easyops",
+        "key":"host_net_unix_total",
+        "metric_type":"gauge",
+        "unit":"",
+        "help":"unix socket总数"
+    },
+    {
+        "tagDefine":[
+
+        ],
+        "help":"总流量",
+        "data_type":"long",
+        "paramDefine":[
+
+        ],
+        "agentType":"calculated",
+        "key":"host_net_bits_total",
+        "metric_type":"gauge",
+        "expression":"host_net_bits_in + host_net_bits_out",
+        "unit":"kbps"
     }
 ]
