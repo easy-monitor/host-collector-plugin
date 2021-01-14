@@ -917,7 +917,7 @@
         "paramDefine":[
 
         ],
-        "agentType":"calculate",
+        "agentType":"calculated",
         "key":"host_net_drop_total",
         "metric_type":"gauge",
         "expression":"host_net_drop_in + host_net_drop_out",
@@ -932,7 +932,7 @@
         "paramDefine":[
 
         ],
-        "agentType":"calculate",
+        "agentType":"calculated",
         "key":"host_net_error_total",
         "metric_type":"gauge",
         "expression":"host_net_error_in + host_net_error_out",
@@ -947,7 +947,7 @@
         "paramDefine":[
 
         ],
-        "agentType":"calculate",
+        "agentType":"calculated",
         "key":"host_net_packages_total",
         "metric_type":"gauge",
         "expression":"host_net_packages_in + host_net_packages_out",
@@ -1158,7 +1158,7 @@
         "paramDefine":[
 
         ],
-        "agentType":"calculate",
+        "agentType":"calculated",
         "key":"host_net_bits_total",
         "metric_type":"gauge",
         "expression":"host_net_bits_in + host_net_bits_out",

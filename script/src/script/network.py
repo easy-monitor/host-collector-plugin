@@ -92,6 +92,7 @@ def convert_to_int(value, default=0):
 
 # constants
 METRIC_TYPE_GAUGE = "gauge"
+METRIC_TYPE_CALC = "calculated"
 
 DATA_TYPE_LONG = "long"
 DATA_TYPE_STRING = "string"
@@ -236,6 +237,122 @@ Metrics = {
         "help": u"网卡丢弃入流量",
         "tagDefine": interfaceTagDefine
     },
+    'host_net_tcp_syn_sent': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"SYN_SENT 连接数量",
+    },
+    'host_net_tcp_syn_recv': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"SYN_RECV 连接数量",
+    },
+    'host_net_tcp_established': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"ESTABLISHED 连接数量",
+    },
+    'host_net_tcp_fin_wait_1': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"FIN-WAIT-1 连接数量",
+    },
+    'host_net_tcp_close_wait': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"CLOSE-WAIT 连接数量",
+    },
+    'host_net_tcp_fin_wait_2': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"SYN_FIN-WAIT-2SENT 连接数量",
+    },
+    'host_net_tcp_last_ack': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"LAST-ACK 连接数量",
+    },
+    'host_net_tcp_time_wait': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"TIME-WAIT 连接数量",
+    },
+    'host_net_tcp_closing': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"CLOSING 连接数量",
+    },
+    'host_net_tcp_closed': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"CLOSED 连接数量",
+    },
+    'host_net_tcp_listen': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"LISTENING 连接数量",
+    },
+    'host_net_tcp_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"tcp socket总数",
+    },
+    'host_net_udp_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"udp socket总数",
+    },
+    'host_net_unix_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "",
+        "help": u"unix socket总数",
+    },
+    'host_net_drop_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "pps",
+        "help": u"网络总丢包量",
+        "agentType": METRIC_TYPE_CALC,
+        "expression": "host_net_drop_in + host_net_drop_out",
+    },
+    'host_net_error_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "pps",
+        "help": u"网络总错误包量",
+        "agentType": METRIC_TYPE_CALC,
+        "expression": "host_net_error_in + host_net_error_out",
+    },
+    'host_net_packages_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "pps",
+        "help": u"网络总包量",
+        "agentType": METRIC_TYPE_CALC,
+        "expression": "host_net_packages_in + host_net_packages_out",
+    },
+    'host_net_bits_total': {
+        "metric_type": METRIC_TYPE_GAUGE,
+        "data_type": DATA_TYPE_LONG,
+        "unit": "kbps",
+        "help": u"总流量",
+        "agentType": METRIC_TYPE_CALC,
+        "expression": "host_net_bits_in + host_net_bits_out",
+    }
 }
 
 agent_type = "easyops"
@@ -469,7 +586,8 @@ def output_metric():
     metric_list = []
     for name, metric in Metrics.iteritems():
         metric['name'] = name
-        metric['agentType'] = agent_type
+        if not 'agentType' in metric:
+            metric['agentType'] = agent_type
         metric['paramDefine'] = param_define
         if 'tagDefine' not in metric:
             metric['tagDefine'] = []
