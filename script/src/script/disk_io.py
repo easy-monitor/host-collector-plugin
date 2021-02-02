@@ -155,8 +155,8 @@ param_define = []
 
 
 def _parse_linux2(output):
-    recent_stats = output.split('Device:')[2].split('\n')
-    header = recent_stats[0]
+    recent_stats = output.split('Device')[2].split('\n')
+    header = recent_stats[0].lstrip(":")
     header_names = re.findall(header_re, header)
 
     io_stats = {}
