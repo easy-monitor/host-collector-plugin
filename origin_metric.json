@@ -159,7 +159,7 @@
         "agentType": "easyops",
         "key": "host_net_packages_in_per",
         "metric_type": "gauge",
-        "unit": "kilobytes/s",
+        "unit": "pps",
         "help": "网卡数据包入流量"
     },
     {
