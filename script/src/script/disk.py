@@ -100,28 +100,28 @@ Metrics = {
     'host_disk_inode_total': {
         "metric_type": GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": "",
         "help": u"磁盘inode总数",
         "tagDefine": tag_define
     },
     'host_disk_inode_free': {
         "metric_type": GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": "",
         "help": u"磁盘空闲inode数",
         "tagDefine": tag_define
     },
     'host_disk_inode_used': {
         "metric_type": GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": "",
         "help": u"磁盘已使用inode数",
         "tagDefine": tag_define
     },
     'host_disk_inode_per': {
         "metric_type": GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_PERCENT_100,
         "help": u"磁盘inode使用率",
         "tagDefine": tag_define
     },

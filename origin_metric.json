@@ -437,7 +437,7 @@
         "agentType": "easyops",
         "key": "host_disk_inode_per",
         "metric_type": "gauge",
-        "unit": "kilobytes",
+        "unit": "%",
         "help": "磁盘inode使用率"
     },
     {
@@ -451,7 +451,14 @@
         "help": "磁盘已使用容量"
     },
     {
-        "tagDefine": [],
+        "tagDefine": [
+            {
+                "default": "",
+                "readOnly": true,
+                "name": "mountpoint",
+                "description": "磁盘分区名称"
+            }
+        ],
         "data_type": "long",
         "paramDefine": [],
         "agentType": "easyops",
@@ -511,7 +518,7 @@
         "agentType": "easyops",
         "key": "host_disk_inode_total",
         "metric_type": "gauge",
-        "unit": "kilobytes",
+        "unit": "",
         "help": "磁盘inode总数"
     },
     {
@@ -545,7 +552,7 @@
         "agentType": "easyops",
         "key": "host_disk_inode_free",
         "metric_type": "gauge",
-        "unit": "kilobytes",
+        "unit": "",
         "help": "磁盘空闲inode数"
     },
     {
@@ -579,7 +586,7 @@
         "agentType": "easyops",
         "key": "host_disk_inode_used",
         "metric_type": "gauge",
-        "unit": "kilobytes",
+        "unit": "",
         "help": "磁盘已使用inode数"
     },
     {
