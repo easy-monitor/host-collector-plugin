@@ -125,33 +125,14 @@ class HostCPUCollector(object):
             cpu_used_total = 0
         cpu_info.update({"host_cpu_used_total": cpu_used_total})
 
-        cpu_times = psutil.cpu_times()
-        if self.last_cpu_times is None:
-            self.last_cpu_times = cpu_times
-            time.sleep(0.1)
-            cpu_times = psutil.cpu_times()
-
-        last_total_time = reduce(lambda s, x: s + x, self.last_cpu_times)
-        now_total_time = reduce(lambda s, x: s + x, cpu_times)
-        total_time = now_total_time - last_total_time
-        cpu_info['host_cpu_used_sy'] = self._get_cpu_time('system', total_time, cpu_times)
-        cpu_info['host_cpu_used_us'] = self._get_cpu_time('user', total_time, cpu_times)
-        cpu_info['host_cpu_used_wa'] = self._get_cpu_time('iowait', total_time, cpu_times)
-
-        self.last_cpu_times = cpu_times
-
+        cpu_times_percent = psutil.cpu_times_percent(interval=3)
+        cpu_info['host_cpu_used_sy'] = self._get_cpu_time('system', cpu_times_percent)
+        cpu_info['host_cpu_used_us'] = self._get_cpu_time('user', cpu_times_percent)
+        cpu_info['host_cpu_used_wa'] = self._get_cpu_time('iowait', cpu_times_percent)
         return cpu_info
 
-    def _get_cpu_time(self, attr, total_time, stat):
-        if not total_time:
-            return 0
-        new_att_time = getattr(stat, attr, None)
-        if new_att_time is None:
-            return None
-        last_attr_time = getattr(self.last_cpu_times, attr, None)
-        if last_attr_time is None:
-            return None
-        return (new_att_time - last_attr_time) * 100 / total_time
+    def _get_cpu_time(self, attr, stat):
+        return getattr(stat, attr, None)
 
 
 class WindowsHostCPUCollector(HostCPUCollector):
