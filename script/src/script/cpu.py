@@ -119,13 +119,13 @@ class HostCPUCollector(object):
             'host_load_5_per_core': '%.2f' % (average_load[1] / cpu_physical_cores),
             'host_load_15_per_core': '%.2f' % (average_load[2] / cpu_physical_cores)
         })
-        cpu_used_total = int(psutil.cpu_percent(interval=3))
-        # 可能因为浮点型数据相减，得到一个很大的负数
-        if cpu_used_total < 0:
-            cpu_used_total = 0
-        cpu_info.update({"host_cpu_used_total": cpu_used_total})
+        # 初始化psutil内部计数缓存
+        psutil.cpu_percent()
+        psutil.cpu_times_percent()
+        time.sleep(3)
 
-        cpu_times_percent = psutil.cpu_times_percent(interval=3)
+        cpu_info.update({"host_cpu_used_total": int(psutil.cpu_percent())})
+        cpu_times_percent = psutil.cpu_times_percent()
         cpu_info['host_cpu_used_sy'] = self._get_cpu_time('system', cpu_times_percent)
         cpu_info['host_cpu_used_us'] = self._get_cpu_time('user', cpu_times_percent)
         cpu_info['host_cpu_used_wa'] = self._get_cpu_time('iowait', cpu_times_percent)
