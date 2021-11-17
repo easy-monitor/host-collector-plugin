@@ -14,7 +14,6 @@ def run_cmd(command, shell=False, close_fds=True):
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
-    proc.wait()
     output, err = proc.communicate()
 
     result = err or output
