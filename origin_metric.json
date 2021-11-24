@@ -706,7 +706,7 @@
         "agentType": "easyops",
         "key": "host_io_r_s",
         "metric_type": "gauge",
-        "unit": "",
+        "unit": "次/秒",
         "help": "每秒完成的读 I/O 设备次数"
     },
     {
@@ -740,7 +740,7 @@
         "agentType": "easyops",
         "key": "host_io_util_per",
         "metric_type": "gauge",
-        "unit": "",
+        "unit": "%",
         "help": "磁盘一秒中有百分之多少的时间用于 I/O 操作"
     },
     {
@@ -848,7 +848,7 @@
         "agentType": "easyops",
         "key": "host_io_w_s",
         "metric_type": "gauge",
-        "unit": "",
+        "unit": "次/秒",
         "help": "每秒完成的写 I/O 设备次数"
     },
     {
