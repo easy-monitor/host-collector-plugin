@@ -1,10 +1,10 @@
 #! /usr/local/easyops/python/bin/python
 # -*- coding: utf-8 -*-
 
-
 import copy
 import json
 import logging
+import os
 import platform
 import socket
 import subprocess
@@ -16,6 +16,7 @@ from contextlib import nested
 import chardet
 import psutil
 
+ESSENTIAL_TOOLS_PATH = "/usr/local/easyops/python/tools/"
 codec_list = ['utf-8', 'gbk', 'gb2312', 'utf-8-sig']
 
 
@@ -535,6 +536,8 @@ class HostNetworkCollector(object):
 
 
 def run(timeout):
+    tool_path = os.environ.get('ESSENTIAL_TOOLS_PATH', None)
+    os.environ['PATH'] = (tool_path if tool_path else ESSENTIAL_TOOLS_PATH) + ':' + os.environ.get('PATH')
     system_type = platform.system().lower()
     if system_type == "windows":
         host_network_collector = HostNetworkCollector()
