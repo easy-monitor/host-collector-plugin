@@ -537,7 +537,10 @@ class HostNetworkCollector(object):
 
 def run(timeout):
     tool_path = os.environ.get('ESSENTIAL_TOOLS_PATH', None)
-    os.environ['PATH'] = (tool_path if tool_path else ESSENTIAL_TOOLS_PATH) + ':' + os.environ.get('PATH')
+    tool_path = tool_path if tool_path else ESSENTIAL_TOOLS_PATH
+    path = os.environ.get('PATH', '').split(':')
+    if tool_path not in path:
+        os.environ['PATH'] = tool_path + ':' + os.environ.get('PATH')
     system_type = platform.system().lower()
     if system_type == "windows":
         host_network_collector = HostNetworkCollector()
