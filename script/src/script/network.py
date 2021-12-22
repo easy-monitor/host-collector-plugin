@@ -99,6 +99,7 @@ DATA_TYPE_LONG = "long"
 DATA_TYPE_STRING = "string"
 
 UNIT_KILOBYTES = "kilobytes/s"
+UNIT_KILOBITS_PER_SECOND = "kilobits/sec(Kbps)"
 
 tagDefine = [
 ]
@@ -143,14 +144,14 @@ Metrics = {
     'host_net_bits_out': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"出流量",
         "tagDefine": tagDefine
     },
     'host_net_drop_in': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"丢弃入流量",
         "tagDefine": tagDefine
     },
@@ -171,21 +172,21 @@ Metrics = {
     'host_net_bits_in': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"入流量",
         "tagDefine": tagDefine
     },
     'host_net_drop_out': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"丢弃出流量",
         "tagDefine": tagDefine
     },
     'host_net_bits_in_per': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"网卡入流量",
         "tagDefine": interfaceTagDefine
     },
@@ -206,7 +207,7 @@ Metrics = {
     'host_net_bits_out_per': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"网卡出流量",
         "tagDefine": interfaceTagDefine
     },
@@ -227,14 +228,14 @@ Metrics = {
     'host_net_drop_out_per': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"网卡丢弃出流量",
         "tagDefine": interfaceTagDefine
     },
     'host_net_drop_in_per': {
         "metric_type": METRIC_TYPE_GAUGE,
         "data_type": DATA_TYPE_LONG,
-        "unit": UNIT_KILOBYTES,
+        "unit": UNIT_KILOBITS_PER_SECOND,
         "help": u"网卡丢弃入流量",
         "tagDefine": interfaceTagDefine
     },
